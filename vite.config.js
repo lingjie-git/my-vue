@@ -16,9 +16,6 @@ export default defineConfig({
     }),
     // ElementPlus()
   ],
-  base: "./", //设置项目的根目录
-  build: {
-    outDir: 'docs' // 打包文件的输出目录
-  }
+  base: process.env.NODE_ENV === "production" ? "/my-vue/" : "./",
 
 })
